@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Information Security Experiments</title>
+    <title>Information Security:General Practice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -53,10 +53,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Information Security Experiments</a>
+          <a class="brand" href="#">Information Security:General Practice</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Summer 2013</a></li>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="lectures.html">Lectures</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -65,44 +66,93 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
+        <div class="span2">
+          <div class="well sidebar-nav sidebar-nav-fixed" id="spyNav">
             <ul class="nav nav-list">
-              <li class="nav-header"></li>
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Lectures</a></li>
+              <li class="nav-header">Sections</li>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="lectures.html">Lectures</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
-        <div class="span9">
+        <div class="span9" data-spy="scroll" data-target="#spyNav">
+          <section id="Home">
           <div class="row-fluid">
             <div class="span9">
               <div class='page-header'>
-                <h1>Information Security Experiments</h1>
+                <h2>Information Security:General Practice</h2>
               </div>
               <div>
-                <h2>Instructors</h2>
+                <h3>Instructors</h3>
                 <p><a href="http://www.cs.northwestern.edu/~ychen/index.html">Yan Chen</a>, Associate Professor, <a href="ychen@northwestern.edu">ychen@northwestern.edu</a></p>
                 <p><a href="http://www.cs.northwestern.edu/~ychen/index.html">Hao Chen</a>, Associate Professor, <a href="chen@ucdavis.edu">chen@ucdavis.edu</a></p>
               </div>
               <div>
-                <h2>Location and Time</h2>
+                <h3>Location and Time</h3>
                 <p>Lectures: Mon 8:00am-11:25am, Caoguangbiao High-Tech Building West, Room 503 
                 </p>
               </div>
               <div>
-                <h2>Course Description</h2>
-                <p>Cybercrime has exploded over the last decade. In this course, we will start with the basic concepts of network security, then focus on security challenges of network and distributed systems as well as the counter-attack approaches. Topics include the latest threat, such as Web security, Software-Defined Networking (SDN) security, software security, smartphone and embedded system security.</p>
-                <p>
-                This course is intended for both CS and CE undergraduates and graduate students.  During the course, we will read and discuss research papers, and identify a list of open research problems, from which the students can choose their class projects.  There will be no exams. Students are encouraged to take 399/499 courses with me, and use the same project for 399/499 and this course.  This course is counted for the project requirement, and the depth areas of system and securitys as well as the breath area of systems for CS major student.</p>
+                <h3>Course Description</h3>
+                <p>This course will focus on information system penetration (hacking). The class will introduce basic theory for many different types of attacks; then we will actually carry them out in ’real-world’ settings. During the course, we will read and discuss papers written by professors as well as hackers. We will learn about different types of hacks and preform them. After learning how to execute such exploits and penetrate a network, we will discuss ways to protect a network from others exploiting the same vulnerabilities.</p>
                 </p>
+              <div>
+                <h3>Course Prerequisites </h3>
+                  <ul>
+                    <li>Recommended: introductory courses on Operating Systems,  Computer Networking, OR Principles of Programming Languages.</li>
+                  </ul>
               </div>
-              
+
+              <div>
+                <h3>Teaching Materials</h3>
+                <ul>
+                  <li>
+                  There is no required textbook. All reading will be from papers which will be made available online. (Course materials will be similar to the course currently offered in Northwestern Univ: (<a href="http://www.cs.northwestern.edu/~ychen/classes/cs450-w13/">http://www.cs.northwestern.edu/~ychen/classes/cs450-w13/</a>)
+                  </li>
+                  <li> Recommended books, references and websites</li>
+                  <ul>
+                    <li><em><span><a
+href="http://vig.prenhall.com/catalog/academic/product/0,1144,0130460192,00.html"><span>Network
+                          Security - Private Communication in a Public
+                          World</span></a></span></em>, by Charlie
+                  Kaufman, <span>Radia</span> <span>Perlman</span> and Mike <span>Speciner</span>, 2nd Edition,
+                  Prentice Hall, 2002</li>
+                <li>Cryptography and
+                    Network Security</a>, by William Stallings, 4<sup>th</sup>
+                  Edition, Prentice Hall, 2006</li>
+                <li><a
+                    href="http://www.wilyhacker.com/">Firewalls and
+                    Internet Security: Repelling the Wily Hacker</a>, 2<sup>nd</sup>
+                  edition, by <span><a
+                      href="http://research.lumeta.com/ches/index.html">William
+
+
+                      R. Cheswick</a>, <a
+                      href="http://www.research.att.com/%7Esmb">Steven
+                      M. <span>Bellovin</span></a>, and
+                    <a href="http://www.avirubin.com"><span>Aviel</span> D. Rubin</a>,
+                    Addison Wesley, 2003</span></li>
+                <li><span>An encyclopedia of <span>DDoS</span> by Dave <span>Dittrich</span> at <st1:place
+                      w:st="on"><st1:placetype w:st="on">Univ.</st1:placetype>
+                      of <st1:placename w:st="on">Washington</st1:placename></st1:place>
+                    is</span> <a
+                    href="http://staff.washington.edu/dittrich/misc/ddos/">here</a>.</li>
+                  </ul>
+              </div>
+              <div>
+                <h3>Grading Policy</h3>
+                <p>No exams for this class.</p>
+                <ul>
+                  <li>Class participation 10%</li>
+                  <li>Paper reading summary 10%</li>
+                  <li>In class paper presentation and debate 25%</li>
+                  <li>Project (including proposal, presentation and report) 55%</li>
+                </ul>
               </div>
             </div><!--/span-->
             
           </div><!--/row-->
-          
+          </section>
         </div><!--/span-->
       </div><!--/row-->
 
@@ -113,22 +163,9 @@
 
     </div><!--/.fluid-container-->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/bootstrap-transition.js"></script>
-    <script src="./assets/js/bootstrap-alert.js"></script>
-    <script src="./assets/js/bootstrap-modal.js"></script>
-    <script src="./assets/js/bootstrap-dropdown.js"></script>
-    <script src="./assets/js/bootstrap-scrollspy.js"></script>
-    <script src="./assets/js/bootstrap-tab.js"></script>
-    <script src="./assets/js/bootstrap-tooltip.js"></script>
-    <script src="./assets/js/bootstrap-popover.js"></script>
-    <script src="./assets/js/bootstrap-button.js"></script>
-    <script src="./assets/js/bootstrap-collapse.js"></script>
-    <script src="./assets/js/bootstrap-carousel.js"></script>
-    <script src="./assets/js/bootstrap-typeahead.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
 
   </body>
 </html>

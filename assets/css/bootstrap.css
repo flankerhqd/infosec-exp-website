@@ -879,3 +879,22 @@ body {
     padding-bottom: 40px;
 }
 .sidebar-nav { padding: 9px 0 }
+
+.sidebar-nav-fixed {
+     position:fixed;
+     top:60px;
+     width:13.97%;
+ }
+
+ @media (max-width: 767px) {
+     .sidebar-nav-fixed {
+         width:auto;
+     }
+ }
+
+ @media (max-width: 979px) {
+     .sidebar-nav-fixed {
+         position:static;
+        width: auto;
+     }
+ }
