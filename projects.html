@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Information Security:General Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="./assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Summer 2013</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Information Security:General Practice
+            </p>
+            <ul class="nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./lectures.html">Lectures</a></li>
+              <li class="active"><a href="./projects.html">Projects</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+          <div class="well sidebar-nav sidebar-nav-fixed" id="spyNav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sections</li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./lectures.html">Lectures</a></li>
+              <li class="active"><a href="./projects.html">Projects</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9" data-spy="scroll" data-target="#spyNav">
+          
+      <section id="Projects">
+           <div class="row-fluid">
+              <h2>Projects</h2>
+            <div class="span12">
+              <div>
+                <h3>My app, My way</h3>
+                <p>Android apps provide useful functions.  However, some apps request too
+many permissions.  Some of these permission are unnecessary, and some
+of them are needed to perform functions that the user doesn't care
+about (such as advertising).<br>
+<br>
+The user may reduce permissions in a number of ways:
+<br>
+<ul>
+<li>Remove permissions from the manifest.</li>
+<li>Replace the API calls that require the permissions with methods that
+return failure.</li>
+
+<li>Replace the API calls that require the permissions with methods that
+return fake data.</li>
+</ul>
+<br>
+As a result of the above transformations, an app may:
+<ul>
+<li>Crash.</li>
+
+<li>Run but have different behavior (e.g., different output or UI)</li>
+
+<li>Run and behave the same as before the transformation.</li>
+</ul>
+<br>
+Your task is to:
+<br>
+<ul>
+<li>Implement the transformations.</li>
+<li>Develop a tool to determine the impact of the transformation on a
+set of apps either fully automatically or semi-automatically.</li>
+</ul>
+Challenge: how to compare the behavior of two similar apps
+automatically?  How to identify the differences?</p>
+              </div>
+
+            <div>
+                <h3>Visual similarity detection of Android apps</h3>
+                <p>Android markets suggest similar apps based on textual descriptions.
+However, from the user's perspective, similar apps have similar
+behavior or UI, i.e., visual similarity.  A tool for detecting
+visually similar apps can not only suggest similar apps automatically
+without the need for textual description but also detect phishing
+apps.
+</p>
+              </div>
+
+            <div>
+                <h3>GreaseMonkey</h3>
+                <p>Greasemonkey (<a href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/">https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/</a>),
+one of the top four most popular extensions for Firefox, provides a
+flexible framework to custom a web page by a small piece of
+JavaScript. Similarly, scriptish (http://scriptish.org/) and native
+support from Chrome can also achieve the same functionality. However,
+due to lack of effective management of their script repository (
+<a href="http://userscripts.org">http://userscripts.org</a>), many vulnerabilities exist for Greasemonkey.
+<br> 
+We categorize them into those following cases:
+<ul>
+<li><b>Privilege escalation.</b>
+<br>
+Say, for example, a Greasemonkey script has an eval function that
+takes an un-sanitized input, thus leading to a web page script with
+Greasemonkey privilege. The script can further fetch gmail page with
+the user’s account, since Greasemonkey scripts do not need to obey
+SOP.
+<br>
+</li>
+<li><b>Privacy Leaks.</b>
+<br>
+A Greasemonkey script can steal users’ confidential information such
+as cookies and useful web page contents and send them to a third-party
+entity.
+<br>
+</li>
+<li><b>Spamming.</b>
+<br>
+A Greasemonkey script can provice spamming material to the user.
+<br>
+</li>
+</ul>
+Therefore, in this project, we want the students to perform the following tasks:<br>
+<ul>
+<li>A related work study to see what has been done currently.<br>
+(Possible related works are VEX
+(<a href="http://static.usenix.org/event/sec10/tech/full_papers/Bandhakavi.pdf">http://static.usenix.org/event/sec10/tech/full_papers/Bandhakavi.pdf</a>),
+GateKeeper (<a href="http://research.microsoft.com/pubs/81084/usenixsec09a.pdf">http://research.microsoft.com/pubs/81084/usenixsec09a.pdf</a>),
+and SIF (<a href="http://cseweb.ucsd.edu/~lerner/papers/pldi09-sif.pdf">http://cseweb.ucsd.edu/~lerner/papers/pldi09-sif.pdf</a>).)<br></li>
+<li>A measurement study of the repository and find out how severe
+the current situation is.</li>
+<li>A better architecture for Greasemonkey script.</li><br>
+</ul>
+</p>
+              </div>
+
+            <div>
+                <h3> Attacking Floodlight OpenFlow Controller</h3>
+                <p>The architecture of OpenFlow determines that controller is the
+Achilles heel of the entire system. There is no doubt that full access
+to the controller can result in full compromise of the network.
+However, further investigation suggests that limited access to few
+functionalities still enables a good deal of attacks. This means that,
+a compromised user that has limited access to the controller can also
+cause significant security issue in a network.
+<br><br>
+In this project, you are expected to implement a number of exploits
+into FloodLight, a open-source OpenFlow controller platform, with your
+home-made modules. The attacks include arbitrary packet sniffing,
+policy bypass, sensitive information leakage and black hole attack, as
+described below.
+<br><ul>
+<li><b>Arbitrary packet sniffing.</b> <br>Attacker has access to the packet
+header (and possibly the payload if receive buffer is full or
+configured to do so) in packet-in message received from OpenFlow
+switch. The sniffed packet can then be insert back via packet-out
+message, possibly with modification.
+</li><br>
+<li><b>Policy bypass.</b><br> Attacker can easily bypass the security policy
+through dynamic-flow tunneling, which evades an existing security
+enforcement device by modifying the packet header via modification
+rules at both ends of the tunnel. For example, if a firewall blocks
+the TCP traffic to all ports except port 80, the attacker can create a
+dynamic-flow tunnel for the attack flow through the firewall disguised
+as web traffic.
+</li><br>
+<li><b>An compromised app can access through the controller API and leak
+out a variety of sensitive information, such as network flow tables
+and device configurations.</b> <br>The information can be sent out via all
+kinds of communication channels provided by the OS, such as network
+connection, storage and other running processes via inter-process
+communication. OF controller maintains a variety of sensitive
+information, such as network flow tables and device configurations,
+which is otherwise invisible outside the control plane. An compromised
+app can access all the information through the controller/app API. The
+app can also send the information out through network connection,
+storage and other running processes via inter-process communication.
+Such information like flow tables and device model may enable the
+conduction of security analysis of OF rules and specific attacks
+towards certain model of switch or software.
+</li><br>
+<li><b>Black hole attack.</b><br> Attacker can manipulate flows stealthily
+through an entire data-plane approach. Assuming the attack controls a
+host within the OpenFlow network, the attack is able to route a
+desired flow to the controlled host before arriving the destination.
+If no host is controlled, the attacker can even create a dynamic-flow
+tunnel to a controlled destination outside the OpenFlow network. The
+controlled host can then conduct any manin-the-middle attacks. If the
+attacker simply drops the desired packets, it becomes black hole
+attack.
+</li></ul>
+</p>
+              </div>
+            </div><!--/span-->
+            
+          </div><!--/row-->
+      </section>
+      </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
